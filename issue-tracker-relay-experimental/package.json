@@ -1,0 +1,61 @@
+{
+  "name": "issue-tracker-relay-experimental",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "0.0.0-experimental-7f28234f8",
+    "react-concurrent-router": "^1.0.1",
+    "react-dom": "0.0.0-experimental-7f28234f8",
+    "react-loading-skeleton": "^2.1.1",
+    "react-markdown": "^4.3.1",
+    "react-relay": "0.0.0-experimental-94e87455",
+    "react-scripts": "3.4.1",
+    "relay-runtime": "^9.1.0"
+  },
+  "scripts": {
+    "start": "npm run relay && react-scripts start",
+    "build": "npm run relay && react-scripts build",
+    "format": "prettier-standard 'src/**/*.js'",
+    "eject": "react-scripts eject",
+    "update-schema": "get-graphql-schema -h \"Authorization=bearer $REACT_APP_GITHUB_AUTH_TOKEN\" https://api.github.com/graphql > schema/schema.graphql",
+    "relay": "relay-compiler --schema schema/schema.graphql --src ./src/ $@"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "fetch"
+    ],
+    "ignore": [
+      "/build/"
+    ]
+  },
+  "lint-staged": {
+    "linters": {
+      "*.js": [
+        "prettier-standard",
+        "git add"
+      ]
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-relay": "^9.1.0",
+    "get-graphql-schema": "^2.1.2",
+    "graphql": "^15.2.0",
+    "prettier-standard": "^16.3.0",
+    "relay-compiler": "^9.1.0",
+    "standard": "^14.3.4"
+  }
+}

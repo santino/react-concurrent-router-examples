@@ -1,0 +1,53 @@
+{
+  "name": "issue-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-concurrent-router": "^1.0.1",
+    "react-dom": "^16.13.1",
+    "react-loading-skeleton": "^2.1.1",
+    "react-markdown": "^4.3.1",
+    "react-scripts": "3.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "format": "prettier-standard 'src/**/*.js'",
+    "eject": "react-scripts eject"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "fetch"
+    ],
+    "ignore": [
+      "/build/"
+    ]
+  },
+  "lint-staged": {
+    "linters": {
+      "*.js": [
+        "prettier-standard",
+        "git add"
+      ]
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "prettier-standard": "^16.3.0",
+    "standard": "^14.3.4"
+  }
+}
