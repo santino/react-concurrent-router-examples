@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "0.0.0-experimental-7f28234f8",
+    "react": "0.14.0",
     "react-concurrent-router": "^1.0.1",
     "react-dom": "0.0.0-experimental-7f28234f8",
     "react-loading-skeleton": "^2.1.1",
