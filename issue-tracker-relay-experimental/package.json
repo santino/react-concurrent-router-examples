@@ -9,7 +9,7 @@
     "react-loading-skeleton": "^2.1.1",
     "react-markdown": "^4.3.1",
     "react-relay": "0.0.0-experimental-94e87455",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "relay-runtime": "^9.1.0"
   },
   "scripts": {
